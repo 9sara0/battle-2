@@ -1,7 +1,7 @@
 feature 'Attacking' do
   scenario 'attack palyer_2' do
     sign_in_and_play
-    click_link 'Attack'
+    click_button 'Attack'
     expect(page).to have_content 'Sara attacked AK'
   end
 
@@ -23,7 +23,7 @@ feature 'Attacking' do
   scenario 'be attacked by player_2' do
     sign_in_and_play
     attack_and_confirm
-    click_link 'Attack'
+    click_button 'Attack'
     expect(page).to have_content 'AK attacked Sara'
   end
 end
